@@ -1,0 +1,31 @@
+{
+  "name": "atom-haskell-hie",
+  "main": "./lib/atom-haskell-hie",
+  "version": "0.0.0",
+  "description": "LSP plugin for HIE (Haskell IDE Engine)",
+  "keywords": [],
+  "activationCommands": {},
+  "repository": "https://github.com/Tehnix/atom-haskell-hie",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "enhancedScopes": [
+    "source.haskell",
+    "text.tex.latex.haskell",
+    "source.cabal"
+  ],
+  "dependencies": {
+    "atom-languageclient": "0.4.0"
+  },
+  "devDependencies": {},
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "globals": ["atom"],
+    "rules": {
+      "space-before-function-paren": ["error", "never"]
+    }
+  }
+}
