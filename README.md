@@ -1,7 +1,7 @@
-# [Not Yet Ready!] Atom plugin for HIE LSP server
+# [Alpha!] Atom plugin for HIE LSP server
 
-This is still very early development. So far `hie` has been spawned, but no actions are available yet in the editor even though consumers and providers have been set.
+Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), relies on [atom-ide-ui](https://atom.io/packages/atom-ide-ui) for displaying LSP interactions. Internatlly uses [atom-languageclient](https://github.com/atom/atom-languageclient) for the LSP client, and [HIE](https://github.com/haskell/haskell-ide-engine) as the LSP server.
 
-Uses [atom-languageclient](https://github.com/atom/atom-languageclient) for the LSP client, and [HIE](https://github.com/haskell/haskell-ide-engine) as the LSP server.
+![Type information](https://user-images.githubusercontent.com/1189998/30077656-7bb51cc0-92b7-11e7-9273-575c0e41e2e1.png)
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![linter warnings](https://user-images.githubusercontent.com/1189998/30077655-7a15e58e-92b7-11e7-8770-63eba732e72d.png)
