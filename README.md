@@ -4,15 +4,28 @@ Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), re
 
 Currently requires Atom `>=1.21.0`, which, at the time of writing, is the [Atom beta](https://atom.io/beta), because of the new incoming updates that the LSP client relies on. You can check out the official announcement for LSP support [on the Atom blog](https://blog.atom.io/2017/09/12/announcing-atom-ide.html) and check out the [using-atom-ide](https://blog.atom.io/2017/09/12/announcing-atom-ide.html#using-atom-ide) section for more details on how it works.
 
-## A few screenshots (only showing a subset!)
+## A few screenshots of the working things
 
-#### Type information on hover
 
-![Type information](https://user-images.githubusercontent.com/1189998/30077656-7bb51cc0-92b7-11e7-9273-575c0e41e2e1.png)
+#### Type/Datatips information on hover & Definitions/Hyperclick
 
-#### Linter warnings on save
+![Definitions/Hypercick support](https://user-images.githubusercontent.com/1189998/30351887-6a3f4d70-9858-11e7-87ae-ab90be448023.png)
 
-![linter warnings](https://user-images.githubusercontent.com/1189998/30077655-7a15e58e-92b7-11e7-8770-63eba732e72d.png)
+#### Linter/diagnostics on save
+
+![Linter Errors](https://user-images.githubusercontent.com/1189998/30351907-7d3d585e-9858-11e7-9a2f-66a8a1582010.png)
+
+#### Outline view & Highlighting
+
+![Outline view on the right side and highlight of anotherFunc](https://user-images.githubusercontent.com/1189998/30351896-71e56dca-9858-11e7-85d7-1d90eee11807.png)
+
+
+## Not working/Broken
+
+- Code actions (should be minor work)
+- Find references (not implemented)
+- Busy signal (I guess?)
+- Code format (will put the cursor at the end of the file on every save)
 
 # Miscellaneous
 
