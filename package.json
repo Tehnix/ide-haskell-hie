@@ -1,7 +1,7 @@
 {
   "name": "atom-haskell-hie",
   "main": "./lib/atom-haskell-hie",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "(Alpha/Unstable) LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {},
