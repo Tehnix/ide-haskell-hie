@@ -24,7 +24,6 @@ Currently requires Atom `>=1.21.0`, which, at the time of writing, is the [Atom 
 
 - Code actions (should be minor work)
 - Find references (not implemented)
-- Busy signal (I guess?)
 - Code format (will put the cursor at the end of the file on every save)
 
 # Miscellaneous
