@@ -2,7 +2,7 @@
   "name": "ide-haskell-hie",
   "main": "./lib/ide-haskell-hie",
   "version": "0.5.3",
-  "description": "(Alpha/Unstable) LSP plugin for HIE (Haskell IDE Engine)",
+  "description": "[BETA] LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {},
   "repository": "https://github.com/Tehnix/ide-haskell-hie",
