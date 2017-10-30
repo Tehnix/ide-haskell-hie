@@ -19,8 +19,7 @@
   ],
   "enhancedScopes": [
     "source.haskell",
-    "text.tex.latex.haskell",
-    "source.cabal"
+    "text.tex.latex.haskell"
   ],
   "eslintConfig": {
     "parserOptions": {
