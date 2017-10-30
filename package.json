@@ -1,11 +1,11 @@
 {
-  "name": "atom-haskell-hie",
-  "main": "./lib/atom-haskell-hie",
+  "name": "ide-haskell-hie",
+  "main": "./lib/ide-haskell-hie",
   "version": "0.5.0",
   "description": "(Alpha/Unstable) LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {},
-  "repository": "https://github.com/Tehnix/atom-haskell-hie",
+  "repository": "https://github.com/Tehnix/ide-haskell-hie",
   "license": "MIT",
   "engines": {
     "atom": ">=1.21.0 <2.0.0"
