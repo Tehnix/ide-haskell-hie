@@ -1,7 +1,7 @@
-# [Beta!] Atom plugin for HIE LSP server
-Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), relies on [atom-ide-ui](https://atom.io/packages/atom-ide-ui) for displaying LSP interactions. Internatlly uses [atom-languageclient](https://github.com/atom/atom-languageclient) for the LSP client, and [HIE](https://github.com/haskell/haskell-ide-engine) as the LSP server.
+# Atom plugin for HIE LSP server
+Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), relies on [atom-ide-ui](https://atom.io/packages/atom-ide-ui) for displaying LSP interactions, and [language-haskell](https://atom.io/packages/language-haskell) to identify Haskell files. Internatlly uses [atom-languageclient](https://github.com/atom/atom-languageclient) for the LSP client, and [HIE](https://github.com/haskell/haskell-ide-engine) as the LSP server.
 
-Currently requires Atom `>=1.21.0` because of the new incoming updates that the LSP client relies on. You can check out the official announcement for LSP support [on the Atom blog](https://blog.atom.io/2017/09/12/announcing-atom-ide.html) and check out the [using-atom-ide](https://blog.atom.io/2017/09/12/announcing-atom-ide.html#using-atom-ide) section for more details on how it works.
+Requires Atom `>=1.21.0` since this was when the LSP client was introduced. You can check out the official announcement for LSP support [on the Atom blog](https://blog.atom.io/2017/09/12/announcing-atom-ide.html) and check out the [using-atom-ide](https://blog.atom.io/2017/09/12/announcing-atom-ide.html#using-atom-ide) section for more details on how it works.
 
 ## A few screenshots of the working things
 #### Type/Datatips information on hover & Definitions/Hyperclick
