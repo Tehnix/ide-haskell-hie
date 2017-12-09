@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "atom-languageclient": "^0.7.2",
-    "atom-package-deps": "^4.6.0",
-    "language-haskell": "*"
+    "atom-package-deps": "^4.6.0"
   },
   "package-deps": [
-    "atom-ide-ui"
+    "atom-ide-ui",
+    "language-haskell"
   ],
   "enhancedScopes": [
     "source.haskell",
