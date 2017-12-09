@@ -5,7 +5,7 @@
   "description": "[BETA] LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {},
-  "repository": "https://github.com/Tehnix/ide-haskell-hie",
+  "repository": "git@github.com:Tehnix/ide-haskell-hie",
   "license": "MIT",
   "engines": {
     "atom": ">=1.21.0 <2.0.0"
