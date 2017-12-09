@@ -20,7 +20,10 @@ Requires Atom `>=1.21.0` since this was when the LSP client was introduced. You 
 No screenshot really necessary here.
 
 ## Not implemented
-- Find references (not implemented)
+
+- Find references (HIE does not support this yet, see [issue #361](https://github.com/haskell/haskell-ide-engine/issues/361))
+- Rename (HIE supports it, but [atom-languageclient](https://github.com/atom/atom-languageclient#capabilities) is TBD, see [issue #13](https://github.com/atom/atom-languageclient/issues/13))
+- Documentation (HIE temporarily disabled this, see [issue #393](https://github.com/haskell/haskell-ide-engine/issues/393))
 
 # Miscellaneous
 The code for the providers that HIE supports can be found [here](https://github.com/haskell/haskell-ide-engine/blob/master/src/Haskell/Ide/Engine/Transport/LspStdio.hs#L758) (permanent link [here](https://github.com/haskell/haskell-ide-engine/blob/0e520cf8f93dbc6a41723bfc95c8c43f87fa6757/src/Haskell/Ide/Engine/Transport/LspStdio.hs#L758)).
