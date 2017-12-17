@@ -36,6 +36,29 @@
       ]
     }
   },
+  "configSchema": {
+    "hiePath": {
+      "title": "Absolute path to ```hie``` executable",
+      "order": 1,
+      "type": "string",
+      "default": "hie",
+      "description": ""
+    },
+    "isDebug": {
+      "title": "Turn on debuging output",
+      "order": 2,
+      "type": "boolean",
+      "default": false,
+      "description": ""
+    },
+    "hieLoggingPath": {
+      "title": "Log to a file (if debuging is on)",
+      "order": 3,
+      "type": "string",
+      "default": "/tmp/hie.log",
+      "description": ""
+    }
+  },
   "consumedServices": {
     "linter-indie": {
       "versions": {
