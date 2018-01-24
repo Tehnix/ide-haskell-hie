@@ -1,3 +1,6 @@
+## 0.8.0
+* Add configuration to use hie-wrapper, which tries to automatically select the correct hie executable mathcing the GHC version of your project
+
 ## 0.7.3
 * Add basic settings that are passed on to HIE, via @domenkozar #7
 

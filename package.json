@@ -44,16 +44,23 @@
       "default": "hie",
       "description": ""
     },
+    "useHieWrapper": {
+      "title": "Use hie-wrapper",
+      "order": 2,
+      "type": "boolean",
+      "default": false,
+      "description": "Automatically try to select a hie version that matches the GHC version of the project (overwrites the hie path)"
+    },
     "isDebug": {
       "title": "Turn on debuging output",
-      "order": 2,
+      "order": 3,
       "type": "boolean",
       "default": false,
       "description": ""
     },
     "hieLoggingPath": {
       "title": "Log to a file (if debuging is on)",
-      "order": 3,
+      "order": 4,
       "type": "string",
       "default": "/tmp/hie.log",
       "description": ""
