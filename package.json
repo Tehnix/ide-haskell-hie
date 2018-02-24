@@ -1,7 +1,7 @@
 {
   "name": "ide-haskell-hie",
   "main": "./lib/ide-haskell-hie",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Haskell LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {},
@@ -11,8 +11,8 @@
     "atom": ">=1.21.0 <2.0.0"
   },
   "dependencies": {
-    "atom-languageclient": "^0.7.2",
-    "atom-package-deps": "^4.6.0"
+    "atom-languageclient": "^0.8.3",
+    "atom-package-deps": "^4.6.1"
   },
   "package-deps": [
     "atom-ide-ui",
