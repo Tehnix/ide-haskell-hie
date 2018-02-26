@@ -3,6 +3,31 @@ Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), re
 
 To get hie to automatically detect the correct hie version to use based on your projects GHC version, enable the experimental flag 'Use hie-wrapper', and make sure to build your project using the Makefile in the [HIE](https://github.com/haskell/haskell-ide-engine) repository (builds multiple versions of hie).
 
+## Installation
+
+You can install `ide-haskell-hie` by using [`apm`](https://github.com/atom/apm).
+```
+apm install ide-haskell-hie
+```
+Or via _Atom > Settings view > Install Packages > Search packages > ide-haskell-hie_
+
+### From source
+To contribute to `ide-haskell-hie` you might want to install it from source:
+```
+# Get source from `ide-haskell-hie` repository
+git clone git@github.com:Tehnix/ide-haskell-hie.git
+cd ide-haskell-hie
+# install dependencies
+npm install
+# link local version in `dev` mode
+apm link --dev
+# start Atom in `dev` mode
+atom --dev
+# To unlink local version of `ide-haskell-hie` run
+apm unlink --dev
+```
+For more information about `apm` and `link` check [Contributing to Official Atom Packages]( https://flight-manual.atom.io/hacking-atom/sections/contributing-to-official-atom-packages/#contributing-to-official-atom-packages).
+
 
 ## A few screenshots of the working things
 #### Type/Datatips information on hover & Definitions/Hyperclick
