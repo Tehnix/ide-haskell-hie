@@ -1,4 +1,4 @@
-## 0.8.2
+## 0.9.0
 * Update LSP dependencies
 * Add support for using a custom hie wrapper
 
