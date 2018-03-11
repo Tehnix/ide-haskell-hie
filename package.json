@@ -4,7 +4,9 @@
   "version": "0.9.1",
   "description": "Haskell LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
-  "activationCommands": {},
+  "activationCommands": {
+    "atom-workspace": "hie:restart-server"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:Tehnix/ide-haskell-hie.git"
@@ -28,6 +30,9 @@
     "source.haskell",
     "text.tex.latex.haskell"
   ],
+  "prettier": {
+    "printWidth": 100
+  },
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6
