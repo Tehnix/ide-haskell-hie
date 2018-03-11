@@ -1,20 +1,26 @@
 {
   "name": "ide-haskell-hie",
   "main": "./lib/ide-haskell-hie",
-  "version": "0.8.0",
+  "version": "0.9.1",
   "description": "Haskell LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "hie:restart-server"
   },
-  "repository": "git@github.com:Tehnix/ide-haskell-hie",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Tehnix/ide-haskell-hie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tehnix/ide-haskell-hie"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.21.0 <2.0.0"
   },
   "dependencies": {
-    "atom-languageclient": "^0.7.2",
-    "atom-package-deps": "^4.6.0"
+    "atom-languageclient": "^0.8.3",
+    "atom-package-deps": "^4.6.1"
   },
   "package-deps": [
     "atom-ide-ui",
@@ -40,29 +46,43 @@
   },
   "configSchema": {
     "hiePath": {
-      "title": "Absolute path to ```hie``` executable",
+      "title": "Absolute path to hie executable",
       "order": 1,
       "type": "string",
       "default": "hie",
       "description": ""
     },
     "useHieWrapper": {
-      "title": "Use hie-wrapper",
+      "title": "Use the hie-wrapper",
       "order": 2,
       "type": "boolean",
       "default": false,
       "description": "Automatically try to select a hie version that matches the GHC version of the project (overwrites the hie path)"
     },
-    "isDebug": {
-      "title": "Turn on debuging output",
+    "useCustomHieWrapper": {
+      "title": "Use a custom hie wrapper",
       "order": 3,
+      "type": "boolean",
+      "default": false,
+      "description": "Use your own custom wrapper for hie (remember to specify the path!). This will take effect over useHieWrapper."
+    },
+    "useCustomHieWrapperPath": {
+      "title": "The path to your custom hie wrapper",
+      "order": 4,
+      "type": "string",
+      "default": "",
+      "description": "Specify the path to your own custom hie wrapper (e.g. /Users/Alice/.hie-wrapper.sh, ${HOME}/wrapper.sh or ${workspaceFolder}/wrapper.sh)."
+    },
+    "isDebug": {
+      "title": "Turn on debugging output",
+      "order": 5,
       "type": "boolean",
       "default": false,
       "description": ""
     },
     "hieLoggingPath": {
-      "title": "Log to a file (if debuging is on)",
-      "order": 4,
+      "title": "Log to a file (if debugging is on)",
+      "order": 6,
       "type": "string",
       "default": "/tmp/hie.log",
       "description": ""

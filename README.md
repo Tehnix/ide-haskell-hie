@@ -3,6 +3,45 @@ Rudimentary support for [HIE](https://github.com/haskell/haskell-ide-engine), re
 
 To get hie to automatically detect the correct hie version to use based on your projects GHC version, enable the experimental flag 'Use hie-wrapper', and make sure to build your project using the Makefile in the [HIE](https://github.com/haskell/haskell-ide-engine) repository (builds multiple versions of hie).
 
+## Installation
+
+You can install `ide-haskell-hie` by using [`apm`](https://github.com/atom/apm).
+```
+apm install ide-haskell-hie
+```
+Or via _Atom > Settings view > Install Packages > Search packages > ide-haskell-hie_
+
+### From source
+To contribute to `ide-haskell-hie` you might want to install it from source:
+```
+# Get source from `ide-haskell-hie` repository
+git clone git@github.com:Tehnix/ide-haskell-hie.git
+cd ide-haskell-hie
+# install dependencies
+npm install
+# link local version in `dev` mode
+apm link --dev
+# start Atom in `dev` mode
+atom --dev
+# To unlink local version of `ide-haskell-hie` run
+apm unlink --dev
+```
+For more information about `apm` and `link` check [Contributing to Official Atom Packages]( https://flight-manual.atom.io/hacking-atom/sections/contributing-to-official-atom-packages/#contributing-to-official-atom-packages).
+
+
+## Configuration
+
+The plugin should work out-the-box, but your environment may differ for many reasons, and the following are some configurations that might help you get it working.
+
+- `Absolute path to hie executable` will set the path to hie, in case it's not on your $PATH.
+- `Use hie wrapper` makes Atom use the `hie-wrapper.sh` file to start hie through. This does assume that you built the hie executable using `make build`, but will fall back to plain `hie`.
+- `Use custom hie wrapper` enables you to use your own custom hie wrapper script, if the standard one doesn't suit your need (e.g. to use with nix).
+- `The path to your custom hie wrapper` specifies the path to the custom wrapper, and is required for it to take effect.
+- `Turn on debugging output` passes the `--debug` flag to hie (although not if using a custom wrapper, then you're on your own).
+- `Log to a file (if debugging is on)` will set the log file that debug writes to.
+
+For additional debugging (e.g. stderr), you can enable `Settings -> Core -> Debug L S P`, and then view the output in the Atom Developer Console.
+
 
 ## A few screenshots of the working things
 #### Type/Datatips information on hover & Definitions/Hyperclick
