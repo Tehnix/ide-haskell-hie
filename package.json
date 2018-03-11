@@ -4,7 +4,9 @@
   "version": "0.8.0",
   "description": "Haskell LSP plugin for HIE (Haskell IDE Engine)",
   "keywords": [],
-  "activationCommands": {},
+  "activationCommands": {
+    "atom-workspace": "hie:restart-server"
+  },
   "repository": "git@github.com:Tehnix/ide-haskell-hie",
   "license": "MIT",
   "engines": {
