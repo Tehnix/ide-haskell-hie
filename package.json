@@ -44,6 +44,9 @@
       ]
     }
   },
+  "prettier": {
+    "printWidth": 100
+  },
   "configSchema": {
     "hiePath": {
       "title": "Absolute path to hie executable",
