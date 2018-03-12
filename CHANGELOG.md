@@ -1,3 +1,7 @@
+## 0.10.0
+* Add restart command (accessible from the command palette)
+* Major cleanup in code
+
 ## 0.9.0
 * Update LSP dependencies
 * Add support for using a custom hie wrapper
