@@ -9,9 +9,7 @@
     "ide",
     "hie"
   ],
-  "activationCommands": {
-    "atom-workspace": "hie:restart-server"
-  },
+  "activationCommands": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:Tehnix/ide-haskell-hie.git"
@@ -21,15 +19,15 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.21.0"
+    "atom": ">=1.21.0 <2.0.0"
   },
   "dependencies": {
     "atom-languageclient": "^0.9.2",
     "atom-package-deps": "^4.6.1"
   },
   "package-deps": [
-    "language-haskell",
-    "atom-ide-ui"
+    "atom-ide-ui",
+    "language-haskell"
   ],
   "enhancedScopes": [
     "source.haskell",
@@ -102,6 +100,11 @@
         "2.0.0": "consumeLinterV2"
       }
     },
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
     "atom-ide-busy-signal": {
       "versions": {
         "0.1.0": "consumeBusySignal"
@@ -132,6 +135,11 @@
     "definitions": {
       "versions": {
         "0.1.0": "provideDefinitions"
+      }
+    },
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "provideHyperclick"
       }
     },
     "find-references": {
