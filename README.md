@@ -40,7 +40,7 @@ The plugin should work out-the-box, but your environment may differ for many rea
 - `Turn on debugging output` passes the `--debug` flag to hie (although not if using a custom wrapper, then you're on your own).
 - `Log to a file (if debugging is on)` will set the log file that debug writes to.
 
-For additional debugging (e.g. stderr), you can enable `Settings -> Core -> Debug L S P`, and then view the output in the Atom Developer Console.
+For additional debugging (e.g. stderr), you can enable `Settings -> Core -> Debug L S P` or add `debugLSP: true` to the core section in `Debug -> Config... -> config.cson`, and then view the output in the Atom Developer Console.
 
 
 ## A few screenshots of the working things
