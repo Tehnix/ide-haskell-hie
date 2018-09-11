@@ -63,7 +63,7 @@
       "order": 2,
       "type": "boolean",
       "default": false,
-      "description": "Automatically try to select a hie version that matches the GHC version of the project (overwrites the hie path)"
+      "description": "Automatically try to select a hie version that matches the GHC version of the project, and enable additional support for stack projects (overwrites the hie path)."
     },
     "useCustomHieWrapper": {
       "title": "Use a custom hie wrapper",
