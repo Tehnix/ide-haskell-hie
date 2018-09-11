@@ -1,3 +1,7 @@
+## 0.11.0
+* Improve hie-wrapper support for stack projects
+* Pass options to custom wrappers that should be passed to hie
+
 ## 0.10.0
 * Add restart command (accessible from the command palette)
 * Major cleanup in code

@@ -3,7 +3,7 @@ DEBUG=1
 indent=""
 function debug {
   if [[ $DEBUG == 1 ]]; then
-    echo "$indent$@" >> /tmp/hie-wrapper.log
+    echo "$indent" "$@" >> /tmp/hie-wrapper.log
   fi
 }
 
@@ -11,13 +11,17 @@ curDir=`pwd`
 debug "Launching HIE for project located at $curDir"
 indent="  "
 
+USE_STACK=
 GHCBIN='ghc'
+HIE_PREFIX=
 # If a .stack-work exists, assume we are using stack.
 if [ -d ".stack-work" ]; then
-  debug "Using stack GHC version"
+  debug 'Using stack GHC and HIE'
+  USE_STACK=1
   GHCBIN='stack ghc --'
+  HIE_PREFIX='stack exec --'
 else
-  debug "Using plain GHC version"
+  debug 'Using plain GHC and HIE'
 fi
 versionNumber=`$GHCBIN --version`
 debug $versionNumber
@@ -52,25 +56,27 @@ else
   debug "WARNING: GHC version does not match any of the checked ones."
 fi
 
-if [ -x "$(command -v $HIEBIN)" ]; then
+find-hie-path () {
+  if [[ -n "$USE_STACK" ]]; then
+    stack exec -- which "$1"
+  else
+    command -v "$1"
+  fi
+}
+
+if [ -x "$(find-hie-path $HIEBIN)" ]; then
   debug "$HIEBIN was found on path"
-elif [ -x "$(command -v $BACKUP_HIEBIN)" ]; then
+elif [ -x "$(find-hie-path $BACKUP_HIEBIN)" ]; then
   debug "Backup $BACKUP_HIEBIN was found on path"
   HIEBIN=$BACKUP_HIEBIN
-else
+elif [ -x "$(find-hie-path hie)" ]; then
   debug "Falling back to plain hie"
   HIEBIN='hie'
-fi
-
-debug "Starting HIE"
-
-# Check that HIE is working
-export HIE_SERVER_PATH=`which $HIEBIN`
-
-if [ "X" = "X$HIE_SERVER_PATH" ]; then
-  echo "Content-Length: 100\r\n\r"
-  echo '{"jsonrpc":"2.0","id":1,"error":{"code":-32099,"message":"Cannot find hie in the path"}}'
+else
+  error_message='{"jsonrpc":"2.0","id":1,"error":{"code":-32099,"message":"Cannot find hie in the path"}}'
+  printf 'Content-Length: %s\r\n\r\n%s' ${#error_message} "$error_message"
   exit 1
 fi
 
-$HIEBIN $@
+debug "Starting HIE"
+exec $HIE_PREFIX "$HIEBIN" "$@"
