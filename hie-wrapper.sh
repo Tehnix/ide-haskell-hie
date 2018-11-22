@@ -52,6 +52,17 @@ elif [[ $versionNumber = *"8.2.2"* ]]; then
 elif [[ $versionNumber = *"8.2"* ]]; then
   debug "Project is using GHC 8.2.*"
   HIEBIN='hie-8.2'
+elif [[ $versionNumber = *"8.4.3"* ]]; then
+  debug "Project is using GHC 8.4.3"
+  HIEBIN='hie-8.4.3'
+  BACKUP_HIEBIN='hie-8.4'
+elif [[ $versionNumber = *"8.4.4"* ]]; then
+  debug "Project is using GHC 8.4.4"
+  HIEBIN='hie-8.4.4'
+  BACKUP_HIEBIN='hie-8.4'
+elif [[ $versionNumber = *"8.4"* ]]; then
+  debug "Project is using GHC 8.4.*"
+  HIEBIN='hie-8.4'
 else
   debug "WARNING: GHC version does not match any of the checked ones."
 fi
